@@ -1,0 +1,289 @@
+/* ROOT */
+:root{
+    /* --main-font-family: "Roboto", "Arial", sans-serif; */
+    /* --main-regular-font-weight: 400; */
+    /* --main-body-bg-color: #fff; */
+    /* --main-text-color: #333; */
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+img{
+    display: block;
+    height: auto;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    
+}
+
+.container{
+    /* max-width: 1340px; */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.site-main{
+    flex-grow: 1;
+}
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("../images/12.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.hero-section{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("../images/12.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+.login-box {
+    
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    box-shadow: 0 15px 25px rgba(0, 255, 255, 0.568);
+    border-radius: 10px;
+}
+
+.login-box p:first-child {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: aqua;
+    font-size: 12px;
+}
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: aqua;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 3px;
+    border-radius: 20%;
+}
+
+.login-box a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 24px 0;
+}
+a:hover .login-box {
+    box-shadow: 0 0 24px 0 rgba(0, 255, 255, 0.404);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+.register{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.register::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000,#08ddd2,#000);
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%
+    {
+        transform: translateY(-100%); 
+    }
+    100%
+    {
+        transform: translateY(100%);
+    }
+}
+.register span{
+    position: relative;
+    display: block;
+    width: calc(6.25vw - 2px);
+    height: calc(6.25vw - 2px);
+    background: #181818;
+    z-index: 2;
+    transition: 1.5s;
+}
+.register span:hover{
+    background: #08ddd2;
+    transition: 0s;
+}
+.register .signin{
+    position: absolute;
+    width: 400px;
+    background: #222;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+.register .signin .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.register .signin .content h2{
+    font-size: 2em;
+    color: #08ddd2;
+    text-transform: uppercase;
+}
+.register .signin .content .form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.register .signin .content .form .inputBx{
+    position: relative;
+    width: 100%;
+}
+.register .signin .content .form .inputBx input{
+    position: relative;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+}
+.register .signin .content .form .inputBx i{
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: #aaa;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.signin .content .form .inputBx input:focus ~ i,
+.signin .content .form .inputBx input:focus ~ i{
+    transform: translateY(-7.5px);
+    font-size: 0.8em;
+    color: #fff;
+}
+.signin .content .form .links{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.signin .content .form .links a{
+    color: #fff;
+    text-decoration: none;
+}
+.signin .content .form .links a:nth-child(2){
+    color: #08ddd2;
+    font-weight: 600;
+}
+.signin .content .form .inputBx input[type="submit"]{
+    padding: 10px;
+    background: #08ddd2;
+    color: #111;
+    font-weight: 600;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+@media (max-width: 900px)
+{
+    section span
+    {
+        position: relative;
+        display: block;
+        width: calc(10vw - 2px);
+        height: calc(10vw - 2px);
+    }
+}
+@media (max-width: 600px)
+{
+    .register span
+    {
+        position: relative;
+        display: block;
+        width: calc(20vw - 2px);
+        height: calc(20vw - 2px);
+    }
+}
